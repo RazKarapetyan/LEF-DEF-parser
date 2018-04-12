@@ -8,6 +8,7 @@ class CCell
 {
 public:
 	CCell(std::vector<CPin>, std::string name);
+	CCell() {};
 	~CCell();
 private:
 	std::vector<CPin> m_pins;

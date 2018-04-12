@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __RECTANGLE__
+#define __RECTANGLE__
+
 class CRectangle
 {
 public:
@@ -12,3 +14,4 @@ private:
 	double m_height;
 };
 
+#endif //__RECTANGLE__

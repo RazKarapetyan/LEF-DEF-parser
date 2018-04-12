@@ -9,6 +9,7 @@ int main()
 	//std::vector<CCell> res = 
 	parser.retrieveCells();
 
+	std::cout << "cell count = " << parser.cells.size() << std::endl;
 	system("pause");
 	return 0;
 }
