@@ -1,0 +1,33 @@
+# Cell macro definitions.
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_P_1
+#      Description : "Buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_P_1
+  CLASS CORE ;
+  FOREIGN PVN_BUF_P_1 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 0.42 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.125 0.305 0.165 0.345 ;
+      LAYER ME1 ;
+      RECT  0.145 0.195 0.215 0.265 ;
+      RECT  0.145 0.265 0.195 0.275 ;
+      RECT  0.125 0.275 0.195 0.375 ;
+      LAYER ME2 ;
+      RECT  0.07 0.225 0.35 0.275 ;
+      LAYER VI1 ;
+      RECT  0.145 0.225 0.195 0.275 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0072 ;
+  END A

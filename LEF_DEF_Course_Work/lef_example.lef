@@ -1,0 +1,2473 @@
+#----------------------------------------------------------------------------
+# Date		: $Date: 2018/02/06 14:50:22 $
+# Copyright	: 1997-2018 by Synopsys, Inc., All Rights Reserved.
+# Revision	: Version $Revision: 1.3 $
+#----------------------------------------------------------------------------
+
+VERSION 5.6 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+# Cell macro definitions.
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_P_1
+#      Description : "Buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_P_1
+  CLASS CORE ;
+  FOREIGN PVN_BUF_P_1 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 0.42 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.125 0.305 0.165 0.345 ;
+      LAYER ME1 ;
+      RECT  0.145 0.195 0.215 0.265 ;
+      RECT  0.145 0.265 0.195 0.275 ;
+      RECT  0.125 0.275 0.195 0.375 ;
+      LAYER ME2 ;
+      RECT  0.07 0.225 0.35 0.275 ;
+      LAYER VI1 ;
+      RECT  0.145 0.225 0.195 0.275 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0072 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 0.42 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 0.42 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 0.5 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.53 0.23 0.57 ;
+      LAYER ME1 ;
+      RECT  0.06 0.525 0.26 0.575 ;
+      RECT  0.15 0.575 0.26 0.595 ;
+      LAYER ME2 ;
+      RECT  0.065 0.525 0.345 0.575 ;
+      LAYER VI1 ;
+      RECT  0.18 0.525 0.23 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.08 0.23 0.12 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 0.5 0.05 ;
+      RECT  0.175 0.05 0.245 0.14 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.13 0.37 0.17 ;
+      RECT  0.33 0.54 0.37 0.58 ;
+      LAYER ME1 ;
+      RECT  0.325 0.1 0.395 0.2 ;
+      RECT  0.345 0.2 0.395 0.525 ;
+      RECT  0.31 0.525 0.395 0.595 ;
+    END
+    ANTENNADIFFAREA 0.0336 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.05 0.125 0.09 0.165 ;
+      RECT  0.255 0.325 0.295 0.365 ;
+      RECT  0.05 0.43 0.09 0.47 ;
+      LAYER ME1 ;
+      RECT  0.025 0.1 0.095 0.195 ;
+      RECT  0.025 0.195 0.075 0.425 ;
+      RECT  0.245 0.305 0.295 0.425 ;
+      RECT  0.025 0.425 0.295 0.475 ;
+  END
+END PVN_BUF_P_1
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_P_16
+#      Description : "Buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_P_16
+  CLASS CORE ;
+  FOREIGN PVN_BUF_P_16 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 3.5 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.315 0.16 0.355 ;
+      RECT  0.26 0.315 0.3 0.355 ;
+      RECT  0.4 0.315 0.44 0.355 ;
+      RECT  0.54 0.315 0.58 0.355 ;
+      RECT  0.68 0.315 0.72 0.355 ;
+      RECT  0.82 0.315 0.86 0.355 ;
+      RECT  0.96 0.315 1.0 0.355 ;
+      RECT  1.1 0.315 1.14 0.355 ;
+      LAYER ME1 ;
+      RECT  0.065 0.2 0.135 0.295 ;
+      RECT  0.065 0.295 1.145 0.375 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0972 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 3.5 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 3.5 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 3.58 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.05 0.54 0.09 0.58 ;
+      RECT  0.33 0.54 0.37 0.58 ;
+      RECT  0.61 0.54 0.65 0.58 ;
+      RECT  0.89 0.54 0.93 0.58 ;
+      RECT  1.17 0.54 1.21 0.58 ;
+      RECT  1.45 0.54 1.49 0.58 ;
+      RECT  1.73 0.54 1.77 0.58 ;
+      RECT  2.01 0.54 2.05 0.58 ;
+      RECT  2.29 0.54 2.33 0.58 ;
+      RECT  2.57 0.54 2.61 0.58 ;
+      RECT  2.85 0.54 2.89 0.58 ;
+      RECT  3.13 0.54 3.17 0.58 ;
+      RECT  3.41 0.54 3.45 0.58 ;
+      LAYER ME1 ;
+      RECT  0.025 0.525 1.24 0.595 ;
+      RECT  1.42 0.525 3.475 0.595 ;
+      LAYER ME2 ;
+      RECT  0.045 0.525 3.455 0.575 ;
+      LAYER VI1 ;
+      RECT  0.075 0.525 0.125 0.575 ;
+      RECT  0.325 0.525 0.375 0.575 ;
+      RECT  0.605 0.525 0.655 0.575 ;
+      RECT  0.885 0.525 0.935 0.575 ;
+      RECT  1.16 0.525 1.21 0.575 ;
+      RECT  1.45 0.525 1.5 0.575 ;
+      RECT  1.725 0.525 1.775 0.575 ;
+      RECT  2.005 0.525 2.055 0.575 ;
+      RECT  2.285 0.525 2.335 0.575 ;
+      RECT  2.565 0.525 2.615 0.575 ;
+      RECT  2.845 0.525 2.895 0.575 ;
+      RECT  3.125 0.525 3.175 0.575 ;
+      RECT  3.375 0.525 3.425 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.08 0.37 0.12 ;
+      RECT  0.61 0.08 0.65 0.12 ;
+      RECT  0.89 0.08 0.93 0.12 ;
+      RECT  1.17 0.08 1.21 0.12 ;
+      RECT  1.45 0.08 1.49 0.12 ;
+      RECT  1.73 0.08 1.77 0.12 ;
+      RECT  2.01 0.08 2.05 0.12 ;
+      RECT  2.29 0.08 2.33 0.12 ;
+      RECT  2.57 0.08 2.61 0.12 ;
+      RECT  2.85 0.08 2.89 0.12 ;
+      RECT  3.13 0.08 3.17 0.12 ;
+      RECT  0.05 0.105 0.09 0.145 ;
+      RECT  3.41 0.105 3.45 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 3.58 0.05 ;
+      RECT  0.315 0.05 0.385 0.145 ;
+      RECT  0.595 0.05 0.665 0.145 ;
+      RECT  0.875 0.05 0.945 0.145 ;
+      RECT  1.155 0.05 1.225 0.145 ;
+      RECT  1.435 0.05 1.505 0.145 ;
+      RECT  1.715 0.05 1.785 0.145 ;
+      RECT  1.995 0.05 2.065 0.145 ;
+      RECT  2.275 0.05 2.345 0.145 ;
+      RECT  2.555 0.05 2.625 0.145 ;
+      RECT  2.835 0.05 2.905 0.145 ;
+      RECT  3.115 0.05 3.185 0.145 ;
+      RECT  3.39 0.05 3.47 0.145 ;
+      RECT  0.03 0.05 0.11 0.15 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  1.31 0.15 1.35 0.19 ;
+      RECT  3.27 0.195 3.31 0.235 ;
+      RECT  1.59 0.2 1.63 0.24 ;
+      RECT  1.87 0.2 1.91 0.24 ;
+      RECT  2.15 0.2 2.19 0.24 ;
+      RECT  2.43 0.2 2.47 0.24 ;
+      RECT  2.71 0.2 2.75 0.24 ;
+      RECT  2.99 0.2 3.03 0.24 ;
+      RECT  1.59 0.43 1.63 0.47 ;
+      RECT  1.87 0.43 1.91 0.47 ;
+      RECT  2.15 0.43 2.19 0.47 ;
+      RECT  2.43 0.43 2.47 0.47 ;
+      RECT  2.71 0.43 2.75 0.47 ;
+      RECT  2.99 0.43 3.03 0.47 ;
+      RECT  3.27 0.435 3.31 0.475 ;
+      RECT  1.31 0.455 1.35 0.495 ;
+      LAYER ME1 ;
+      RECT  1.295 0.1 1.365 0.195 ;
+      RECT  1.295 0.195 3.475 0.245 ;
+      RECT  3.425 0.245 3.475 0.425 ;
+      RECT  1.305 0.425 3.475 0.475 ;
+      RECT  1.305 0.475 1.355 0.525 ;
+    END
+    ANTENNADIFFAREA 0.3696 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.19 0.175 0.23 0.215 ;
+      RECT  0.47 0.2 0.51 0.24 ;
+      RECT  0.75 0.2 0.79 0.24 ;
+      RECT  1.03 0.2 1.07 0.24 ;
+      RECT  1.24 0.315 1.28 0.355 ;
+      RECT  1.38 0.315 1.42 0.355 ;
+      RECT  1.52 0.315 1.56 0.355 ;
+      RECT  1.66 0.315 1.7 0.355 ;
+      RECT  1.8 0.315 1.84 0.355 ;
+      RECT  1.94 0.315 1.98 0.355 ;
+      RECT  2.08 0.315 2.12 0.355 ;
+      RECT  2.22 0.315 2.26 0.355 ;
+      RECT  2.36 0.315 2.4 0.355 ;
+      RECT  2.5 0.315 2.54 0.355 ;
+      RECT  2.64 0.315 2.68 0.355 ;
+      RECT  2.78 0.315 2.82 0.355 ;
+      RECT  2.92 0.315 2.96 0.355 ;
+      RECT  3.06 0.315 3.1 0.355 ;
+      RECT  3.2 0.315 3.24 0.355 ;
+      RECT  3.335 0.315 3.375 0.355 ;
+      RECT  0.19 0.43 0.23 0.47 ;
+      RECT  0.47 0.43 0.51 0.47 ;
+      RECT  0.75 0.43 0.79 0.47 ;
+      RECT  1.03 0.43 1.07 0.47 ;
+      LAYER ME1 ;
+      RECT  0.185 0.145 0.235 0.195 ;
+      RECT  0.185 0.195 1.245 0.245 ;
+      RECT  1.195 0.245 1.245 0.295 ;
+      RECT  1.195 0.295 3.375 0.375 ;
+      RECT  1.195 0.375 1.245 0.425 ;
+      RECT  0.16 0.425 1.245 0.475 ;
+  END
+END PVN_BUF_P_16
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_P_2
+#      Description : "Buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_P_2
+  CLASS CORE ;
+  FOREIGN PVN_BUF_P_2 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 0.56 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.125 0.315 0.165 0.355 ;
+      LAYER ME1 ;
+      RECT  0.125 0.29 0.18 0.41 ;
+      RECT  0.125 0.41 0.24 0.475 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.01215 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 0.56 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 0.56 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 0.64 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.53 0.23 0.57 ;
+      RECT  0.47 0.545 0.51 0.585 ;
+      LAYER ME1 ;
+      RECT  0.17 0.525 0.53 0.595 ;
+      LAYER ME2 ;
+      RECT  0.235 0.525 0.515 0.575 ;
+      LAYER VI1 ;
+      RECT  0.275 0.525 0.325 0.575 ;
+      RECT  0.435 0.525 0.485 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.08 0.23 0.12 ;
+      RECT  0.47 0.105 0.51 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 0.64 0.05 ;
+      RECT  0.17 0.05 0.25 0.12 ;
+      RECT  0.45 0.05 0.53 0.145 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.135 0.37 0.175 ;
+      RECT  0.33 0.435 0.37 0.475 ;
+      LAYER ME1 ;
+      RECT  0.33 0.1 0.4 0.195 ;
+      RECT  0.33 0.195 0.535 0.245 ;
+      RECT  0.485 0.245 0.535 0.425 ;
+      RECT  0.31 0.425 0.535 0.475 ;
+    END
+    ANTENNADIFFAREA 0.0462 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.05 0.175 0.09 0.215 ;
+      RECT  0.26 0.305 0.3 0.345 ;
+      RECT  0.395 0.315 0.435 0.355 ;
+      RECT  0.05 0.54 0.09 0.58 ;
+      LAYER ME1 ;
+      RECT  0.025 0.17 0.28 0.22 ;
+      RECT  0.23 0.22 0.28 0.295 ;
+      RECT  0.23 0.295 0.435 0.355 ;
+      RECT  0.365 0.355 0.435 0.375 ;
+      RECT  0.025 0.22 0.075 0.52 ;
+      RECT  0.025 0.52 0.095 0.6 ;
+  END
+END PVN_BUF_P_2
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_P_3
+#      Description : "Buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_P_3
+  CLASS CORE ;
+  FOREIGN PVN_BUF_P_3 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 0.84 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.255 0.305 0.295 0.345 ;
+      RECT  0.12 0.315 0.16 0.355 ;
+      LAYER ME1 ;
+      RECT  0.04 0.2 0.11 0.285 ;
+      RECT  0.04 0.285 0.295 0.365 ;
+      RECT  0.04 0.365 0.11 0.42 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0183 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 0.84 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 0.84 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 0.92 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.61 0.53 0.65 0.57 ;
+      RECT  0.05 0.53 0.09 0.57 ;
+      RECT  0.33 0.53 0.37 0.57 ;
+      LAYER ME1 ;
+      RECT  0.03 0.53 0.11 0.55 ;
+      RECT  0.3 0.525 0.41 0.55 ;
+      RECT  0.03 0.55 0.41 0.6 ;
+      RECT  0.585 0.525 0.785 0.595 ;
+      LAYER ME2 ;
+      RECT  0.3 0.525 0.695 0.575 ;
+      LAYER VI1 ;
+      RECT  0.33 0.525 0.38 0.575 ;
+      RECT  0.615 0.525 0.665 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.08 0.37 0.12 ;
+      RECT  0.61 0.08 0.65 0.12 ;
+      RECT  0.05 0.105 0.09 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 0.92 0.05 ;
+      RECT  0.31 0.05 0.39 0.125 ;
+      RECT  0.59 0.05 0.67 0.125 ;
+      RECT  0.025 0.05 0.11 0.15 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.47 0.135 0.51 0.175 ;
+      RECT  0.75 0.18 0.79 0.22 ;
+      RECT  0.75 0.43 0.79 0.47 ;
+      RECT  0.47 0.455 0.51 0.495 ;
+      LAYER ME1 ;
+      RECT  0.455 0.1 0.525 0.175 ;
+      RECT  0.455 0.175 0.815 0.225 ;
+      RECT  0.765 0.225 0.815 0.425 ;
+      RECT  0.46 0.425 0.815 0.475 ;
+      RECT  0.46 0.475 0.53 0.525 ;
+    END
+    ANTENNADIFFAREA 0.0798 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.19 0.15 0.23 0.19 ;
+      RECT  0.4 0.315 0.44 0.355 ;
+      RECT  0.54 0.315 0.58 0.355 ;
+      RECT  0.675 0.315 0.715 0.355 ;
+      RECT  0.19 0.46 0.23 0.5 ;
+      LAYER ME1 ;
+      RECT  0.185 0.12 0.235 0.175 ;
+      RECT  0.185 0.175 0.395 0.225 ;
+      RECT  0.345 0.225 0.395 0.295 ;
+      RECT  0.345 0.295 0.715 0.375 ;
+      RECT  0.345 0.375 0.395 0.425 ;
+      RECT  0.17 0.425 0.395 0.475 ;
+      RECT  0.17 0.475 0.25 0.5 ;
+  END
+END PVN_BUF_P_3
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_P_4
+#      Description : "Buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_P_4
+  CLASS CORE ;
+  FOREIGN PVN_BUF_P_4 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 0.98 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.315 0.16 0.355 ;
+      RECT  0.255 0.315 0.295 0.355 ;
+      LAYER ME1 ;
+      RECT  0.03 0.195 0.1 0.295 ;
+      RECT  0.03 0.295 0.295 0.375 ;
+      RECT  0.03 0.375 0.1 0.435 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0243 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 0.98 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 0.98 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 1.06 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.61 0.53 0.65 0.57 ;
+      RECT  0.89 0.53 0.93 0.57 ;
+      RECT  0.05 0.53 0.09 0.57 ;
+      RECT  0.33 0.53 0.37 0.57 ;
+      LAYER ME1 ;
+      RECT  0.03 0.525 0.4 0.6 ;
+      RECT  0.59 0.525 0.95 0.595 ;
+      LAYER ME2 ;
+      RECT  0.155 0.525 0.825 0.575 ;
+      LAYER VI1 ;
+      RECT  0.185 0.525 0.235 0.575 ;
+      RECT  0.745 0.525 0.795 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.08 0.37 0.12 ;
+      RECT  0.61 0.08 0.65 0.12 ;
+      RECT  0.05 0.105 0.09 0.145 ;
+      RECT  0.89 0.105 0.93 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 1.06 0.05 ;
+      RECT  0.31 0.05 0.39 0.125 ;
+      RECT  0.59 0.05 0.67 0.125 ;
+      RECT  0.03 0.05 0.11 0.145 ;
+      RECT  0.87 0.05 0.95 0.145 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.47 0.13 0.51 0.17 ;
+      RECT  0.75 0.195 0.79 0.235 ;
+      RECT  0.75 0.435 0.79 0.475 ;
+      RECT  0.47 0.445 0.51 0.485 ;
+      LAYER ME1 ;
+      RECT  0.455 0.1 0.525 0.195 ;
+      RECT  0.455 0.195 0.955 0.245 ;
+      RECT  0.905 0.245 0.955 0.425 ;
+      RECT  0.455 0.425 0.955 0.475 ;
+      RECT  0.455 0.475 0.525 0.505 ;
+    END
+    ANTENNADIFFAREA 0.0924 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.19 0.185 0.23 0.225 ;
+      RECT  0.4 0.315 0.44 0.355 ;
+      RECT  0.54 0.315 0.58 0.355 ;
+      RECT  0.68 0.315 0.72 0.355 ;
+      RECT  0.815 0.315 0.855 0.355 ;
+      RECT  0.19 0.435 0.23 0.475 ;
+      LAYER ME1 ;
+      RECT  0.17 0.18 0.395 0.23 ;
+      RECT  0.345 0.23 0.395 0.295 ;
+      RECT  0.345 0.295 0.855 0.375 ;
+      RECT  0.345 0.375 0.395 0.425 ;
+      RECT  0.17 0.425 0.395 0.475 ;
+  END
+END PVN_BUF_P_4
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_P_6
+#      Description : "Buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_P_6
+  CLASS CORE ;
+  FOREIGN PVN_BUF_P_6 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 1.4 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.315 0.16 0.355 ;
+      RECT  0.26 0.315 0.3 0.355 ;
+      RECT  0.395 0.315 0.435 0.355 ;
+      LAYER ME1 ;
+      RECT  0.1 0.295 0.435 0.375 ;
+      LAYER ME2 ;
+      RECT  0.155 0.325 0.435 0.375 ;
+      LAYER VI1 ;
+      RECT  0.185 0.325 0.235 0.375 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.03645 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 1.4 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 1.4 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 1.48 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.75 0.53 0.79 0.57 ;
+      RECT  1.03 0.53 1.07 0.57 ;
+      RECT  1.31 0.53 1.35 0.57 ;
+      RECT  0.19 0.53 0.23 0.57 ;
+      RECT  0.47 0.53 0.51 0.57 ;
+      LAYER ME1 ;
+      RECT  0.17 0.525 0.54 0.6 ;
+      RECT  0.72 0.525 1.37 0.595 ;
+      LAYER ME2 ;
+      RECT  0.295 0.525 1.245 0.575 ;
+      LAYER VI1 ;
+      RECT  0.325 0.525 0.375 0.575 ;
+      RECT  0.885 0.525 0.935 0.575 ;
+      RECT  1.165 0.525 1.215 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.08 0.23 0.12 ;
+      RECT  0.47 0.08 0.51 0.12 ;
+      RECT  0.75 0.08 0.79 0.12 ;
+      RECT  1.03 0.08 1.07 0.12 ;
+      RECT  1.31 0.105 1.35 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 1.48 0.05 ;
+      RECT  0.73 0.05 0.81 0.125 ;
+      RECT  1.01 0.05 1.09 0.125 ;
+      RECT  0.17 0.05 0.25 0.13 ;
+      RECT  0.45 0.05 0.53 0.13 ;
+      RECT  1.29 0.05 1.37 0.145 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.61 0.13 0.65 0.17 ;
+      RECT  1.17 0.195 1.21 0.235 ;
+      RECT  0.89 0.2 0.93 0.24 ;
+      RECT  0.89 0.43 0.93 0.47 ;
+      RECT  1.17 0.435 1.21 0.475 ;
+      RECT  0.61 0.445 0.65 0.485 ;
+      LAYER ME1 ;
+      RECT  0.595 0.1 0.665 0.195 ;
+      RECT  0.595 0.195 1.375 0.245 ;
+      RECT  1.325 0.245 1.375 0.425 ;
+      RECT  0.595 0.425 1.375 0.475 ;
+      RECT  0.595 0.475 0.665 0.505 ;
+    END
+    ANTENNADIFFAREA 0.1386 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.05 0.13 0.09 0.17 ;
+      RECT  0.33 0.185 0.37 0.225 ;
+      RECT  0.54 0.315 0.58 0.355 ;
+      RECT  0.68 0.315 0.72 0.355 ;
+      RECT  0.82 0.315 0.86 0.355 ;
+      RECT  0.96 0.315 1.0 0.355 ;
+      RECT  1.1 0.315 1.14 0.355 ;
+      RECT  1.235 0.315 1.275 0.355 ;
+      RECT  0.33 0.435 0.37 0.475 ;
+      RECT  0.05 0.445 0.09 0.485 ;
+      LAYER ME1 ;
+      RECT  0.04 0.105 0.11 0.18 ;
+      RECT  0.04 0.18 0.535 0.23 ;
+      RECT  0.485 0.23 0.535 0.295 ;
+      RECT  0.485 0.295 1.275 0.375 ;
+      RECT  0.485 0.375 0.535 0.425 ;
+      RECT  0.035 0.425 0.535 0.475 ;
+      RECT  0.035 0.475 0.105 0.505 ;
+  END
+END PVN_BUF_P_6
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_P_8
+#      Description : "Buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_P_8
+  CLASS CORE ;
+  FOREIGN PVN_BUF_P_8 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 1.82 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.315 0.16 0.355 ;
+      RECT  0.26 0.315 0.3 0.355 ;
+      RECT  0.4 0.315 0.44 0.355 ;
+      RECT  0.535 0.315 0.575 0.355 ;
+      LAYER ME1 ;
+      RECT  0.03 0.2 0.115 0.295 ;
+      RECT  0.03 0.295 0.575 0.375 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0486 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 1.82 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 1.82 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 1.9 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.89 0.53 0.93 0.57 ;
+      RECT  1.17 0.53 1.21 0.57 ;
+      RECT  1.45 0.53 1.49 0.57 ;
+      RECT  1.73 0.53 1.77 0.57 ;
+      RECT  0.05 0.53 0.09 0.57 ;
+      RECT  0.33 0.53 0.37 0.57 ;
+      RECT  0.61 0.53 0.65 0.57 ;
+      LAYER ME1 ;
+      RECT  0.025 0.525 0.68 0.6 ;
+      RECT  0.865 0.525 1.79 0.595 ;
+      LAYER ME2 ;
+      RECT  0.155 0.525 1.665 0.575 ;
+      LAYER VI1 ;
+      RECT  0.185 0.525 0.235 0.575 ;
+      RECT  0.465 0.525 0.515 0.575 ;
+      RECT  1.025 0.525 1.075 0.575 ;
+      RECT  1.305 0.525 1.355 0.575 ;
+      RECT  1.585 0.525 1.635 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.08 0.37 0.12 ;
+      RECT  0.61 0.08 0.65 0.12 ;
+      RECT  0.89 0.08 0.93 0.12 ;
+      RECT  1.17 0.08 1.21 0.12 ;
+      RECT  1.45 0.08 1.49 0.12 ;
+      RECT  0.05 0.105 0.09 0.145 ;
+      RECT  1.73 0.105 1.77 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 1.9 0.05 ;
+      RECT  0.87 0.05 0.95 0.125 ;
+      RECT  1.15 0.05 1.23 0.125 ;
+      RECT  1.43 0.05 1.51 0.125 ;
+      RECT  0.31 0.05 0.39 0.13 ;
+      RECT  0.59 0.05 0.67 0.13 ;
+      RECT  1.71 0.05 1.79 0.145 ;
+      RECT  0.03 0.05 0.11 0.15 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.75 0.13 0.79 0.17 ;
+      RECT  1.59 0.195 1.63 0.235 ;
+      RECT  1.03 0.2 1.07 0.24 ;
+      RECT  1.31 0.2 1.35 0.24 ;
+      RECT  1.03 0.43 1.07 0.47 ;
+      RECT  1.31 0.43 1.35 0.47 ;
+      RECT  1.59 0.435 1.63 0.475 ;
+      RECT  0.75 0.445 0.79 0.485 ;
+      LAYER ME1 ;
+      RECT  0.735 0.1 0.805 0.195 ;
+      RECT  0.735 0.195 1.795 0.245 ;
+      RECT  1.745 0.245 1.795 0.425 ;
+      RECT  0.735 0.425 1.795 0.475 ;
+      RECT  0.735 0.475 0.805 0.505 ;
+    END
+    ANTENNADIFFAREA 0.1848 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.19 0.155 0.23 0.195 ;
+      RECT  0.47 0.185 0.51 0.225 ;
+      RECT  0.68 0.315 0.72 0.355 ;
+      RECT  0.82 0.315 0.86 0.355 ;
+      RECT  0.96 0.315 1.0 0.355 ;
+      RECT  1.1 0.315 1.14 0.355 ;
+      RECT  1.24 0.315 1.28 0.355 ;
+      RECT  1.38 0.315 1.42 0.355 ;
+      RECT  1.52 0.315 1.56 0.355 ;
+      RECT  1.655 0.315 1.695 0.355 ;
+      RECT  0.19 0.43 0.23 0.47 ;
+      RECT  0.47 0.435 0.51 0.475 ;
+      LAYER ME1 ;
+      RECT  0.175 0.135 0.245 0.18 ;
+      RECT  0.175 0.18 0.675 0.23 ;
+      RECT  0.625 0.23 0.675 0.295 ;
+      RECT  0.625 0.295 1.695 0.375 ;
+      RECT  0.625 0.375 0.675 0.425 ;
+      RECT  0.17 0.425 0.675 0.475 ;
+  END
+END PVN_BUF_P_8
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_PS_1
+#      Description : "Symmetric rise/fall delay buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_PS_1
+  CLASS CORE ;
+  FOREIGN PVN_BUF_PS_1 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 0.42 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.315 0.16 0.355 ;
+      LAYER ME1 ;
+      RECT  0.025 0.27 0.16 0.375 ;
+      LAYER ME2 ;
+      RECT  0.05 0.325 0.33 0.375 ;
+      LAYER VI1 ;
+      RECT  0.08 0.325 0.13 0.375 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0072 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 0.42 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 0.42 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 0.5 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.53 0.23 0.57 ;
+      LAYER ME1 ;
+      RECT  0.155 0.525 0.275 0.55 ;
+      RECT  0.05 0.55 0.275 0.6 ;
+      LAYER ME2 ;
+      RECT  0.065 0.525 0.345 0.575 ;
+      LAYER VI1 ;
+      RECT  0.185 0.525 0.235 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.08 0.23 0.12 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 0.5 0.05 ;
+      RECT  0.17 0.05 0.25 0.12 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.13 0.37 0.17 ;
+      RECT  0.33 0.47 0.37 0.51 ;
+      LAYER ME1 ;
+      RECT  0.325 0.1 0.395 0.2 ;
+      RECT  0.345 0.2 0.395 0.45 ;
+      RECT  0.325 0.45 0.395 0.53 ;
+    END
+    ANTENNADIFFAREA 0.0312 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.05 0.125 0.09 0.165 ;
+      RECT  0.255 0.305 0.295 0.345 ;
+      RECT  0.05 0.455 0.09 0.495 ;
+      LAYER ME1 ;
+      RECT  0.025 0.105 0.095 0.17 ;
+      RECT  0.025 0.17 0.26 0.22 ;
+      RECT  0.21 0.22 0.26 0.285 ;
+      RECT  0.21 0.285 0.295 0.365 ;
+      RECT  0.21 0.365 0.26 0.425 ;
+      RECT  0.03 0.425 0.26 0.475 ;
+      RECT  0.03 0.475 0.11 0.5 ;
+  END
+END PVN_BUF_PS_1
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_PS_12
+#      Description : "Symmetric rise/fall delay buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_PS_12
+  CLASS CORE ;
+  FOREIGN PVN_BUF_PS_12 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 2.66 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.315 0.16 0.355 ;
+      RECT  0.26 0.315 0.3 0.355 ;
+      RECT  0.4 0.315 0.44 0.355 ;
+      RECT  0.54 0.315 0.58 0.355 ;
+      RECT  0.68 0.315 0.72 0.355 ;
+      RECT  0.815 0.315 0.855 0.355 ;
+      LAYER ME1 ;
+      RECT  0.03 0.195 0.1 0.295 ;
+      RECT  0.03 0.295 0.855 0.375 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0711 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 2.66 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 2.66 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 2.74 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  1.17 0.53 1.21 0.57 ;
+      RECT  1.45 0.53 1.49 0.57 ;
+      RECT  1.73 0.53 1.77 0.57 ;
+      RECT  2.01 0.53 2.05 0.57 ;
+      RECT  2.29 0.53 2.33 0.57 ;
+      RECT  2.57 0.53 2.61 0.57 ;
+      RECT  0.05 0.53 0.09 0.57 ;
+      RECT  0.33 0.53 0.37 0.57 ;
+      RECT  0.61 0.53 0.65 0.57 ;
+      RECT  0.89 0.53 0.93 0.57 ;
+      LAYER ME1 ;
+      RECT  0.03 0.525 0.96 0.6 ;
+      RECT  1.14 0.525 2.63 0.595 ;
+      LAYER ME2 ;
+      RECT  0.155 0.525 2.505 0.575 ;
+      LAYER VI1 ;
+      RECT  0.185 0.525 0.235 0.575 ;
+      RECT  0.465 0.525 0.515 0.575 ;
+      RECT  0.745 0.525 0.795 0.575 ;
+      RECT  1.305 0.525 1.355 0.575 ;
+      RECT  1.585 0.525 1.635 0.575 ;
+      RECT  1.865 0.525 1.915 0.575 ;
+      RECT  2.145 0.525 2.195 0.575 ;
+      RECT  2.425 0.525 2.475 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.08 0.37 0.12 ;
+      RECT  0.61 0.08 0.65 0.12 ;
+      RECT  0.89 0.08 0.93 0.12 ;
+      RECT  1.17 0.08 1.21 0.12 ;
+      RECT  1.45 0.08 1.49 0.12 ;
+      RECT  1.73 0.08 1.77 0.12 ;
+      RECT  2.01 0.08 2.05 0.12 ;
+      RECT  2.29 0.08 2.33 0.12 ;
+      RECT  0.05 0.105 0.09 0.145 ;
+      RECT  2.57 0.105 2.61 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 2.74 0.05 ;
+      RECT  1.15 0.05 1.23 0.125 ;
+      RECT  1.43 0.05 1.51 0.125 ;
+      RECT  0.31 0.05 0.39 0.13 ;
+      RECT  0.59 0.05 0.67 0.13 ;
+      RECT  0.87 0.05 0.95 0.13 ;
+      RECT  1.71 0.05 1.79 0.13 ;
+      RECT  1.99 0.05 2.07 0.13 ;
+      RECT  2.27 0.05 2.35 0.13 ;
+      RECT  0.03 0.05 0.11 0.145 ;
+      RECT  2.55 0.05 2.63 0.145 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  1.03 0.13 1.07 0.17 ;
+      RECT  2.43 0.195 2.47 0.235 ;
+      RECT  1.31 0.2 1.35 0.24 ;
+      RECT  1.59 0.2 1.63 0.24 ;
+      RECT  1.87 0.2 1.91 0.24 ;
+      RECT  2.15 0.2 2.19 0.24 ;
+      RECT  1.31 0.43 1.35 0.47 ;
+      RECT  1.59 0.43 1.63 0.47 ;
+      RECT  1.87 0.43 1.91 0.47 ;
+      RECT  2.15 0.43 2.19 0.47 ;
+      RECT  2.43 0.435 2.47 0.475 ;
+      RECT  1.03 0.445 1.07 0.485 ;
+      LAYER ME1 ;
+      RECT  1.015 0.1 1.085 0.195 ;
+      RECT  1.015 0.195 2.635 0.245 ;
+      RECT  2.585 0.245 2.635 0.425 ;
+      RECT  1.015 0.425 2.635 0.475 ;
+      RECT  1.015 0.475 1.085 0.505 ;
+    END
+    ANTENNADIFFAREA 0.2607 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.19 0.19 0.23 0.23 ;
+      RECT  0.47 0.19 0.51 0.23 ;
+      RECT  0.75 0.19 0.79 0.23 ;
+      RECT  0.96 0.315 1.0 0.355 ;
+      RECT  1.1 0.315 1.14 0.355 ;
+      RECT  1.24 0.315 1.28 0.355 ;
+      RECT  1.38 0.315 1.42 0.355 ;
+      RECT  1.52 0.315 1.56 0.355 ;
+      RECT  1.66 0.315 1.7 0.355 ;
+      RECT  1.8 0.315 1.84 0.355 ;
+      RECT  1.94 0.315 1.98 0.355 ;
+      RECT  2.08 0.315 2.12 0.355 ;
+      RECT  2.22 0.315 2.26 0.355 ;
+      RECT  2.36 0.315 2.4 0.355 ;
+      RECT  2.495 0.315 2.535 0.355 ;
+      RECT  0.47 0.43 0.51 0.47 ;
+      RECT  0.19 0.435 0.23 0.475 ;
+      RECT  0.75 0.435 0.79 0.475 ;
+      LAYER ME1 ;
+      RECT  0.17 0.185 0.955 0.235 ;
+      RECT  0.905 0.235 0.955 0.295 ;
+      RECT  0.905 0.295 2.535 0.375 ;
+      RECT  0.905 0.375 0.955 0.425 ;
+      RECT  0.165 0.425 0.955 0.475 ;
+  END
+END PVN_BUF_PS_12
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_PS_16
+#      Description : "Symmetric rise/fall delay buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_PS_16
+  CLASS CORE ;
+  FOREIGN PVN_BUF_PS_16 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 3.36 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.315 0.16 0.355 ;
+      RECT  0.26 0.315 0.3 0.355 ;
+      RECT  0.4 0.315 0.44 0.355 ;
+      RECT  0.54 0.315 0.58 0.355 ;
+      RECT  0.68 0.315 0.72 0.355 ;
+      RECT  0.82 0.315 0.86 0.355 ;
+      RECT  0.955 0.315 0.995 0.355 ;
+      LAYER ME1 ;
+      RECT  0.1 0.295 0.995 0.375 ;
+      LAYER ME2 ;
+      RECT  0.55 0.325 0.83 0.375 ;
+      LAYER VI1 ;
+      RECT  0.68 0.325 0.73 0.375 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.08295 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 3.36 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 3.36 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 3.44 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  1.31 0.53 1.35 0.57 ;
+      RECT  1.59 0.53 1.63 0.57 ;
+      RECT  1.87 0.53 1.91 0.57 ;
+      RECT  2.15 0.53 2.19 0.57 ;
+      RECT  2.43 0.53 2.47 0.57 ;
+      RECT  2.71 0.53 2.75 0.57 ;
+      RECT  2.99 0.53 3.03 0.57 ;
+      RECT  3.27 0.53 3.31 0.57 ;
+      RECT  0.19 0.53 0.23 0.57 ;
+      RECT  0.47 0.53 0.51 0.57 ;
+      RECT  0.75 0.53 0.79 0.57 ;
+      RECT  1.03 0.53 1.07 0.57 ;
+      LAYER ME1 ;
+      RECT  0.16 0.525 1.1 0.6 ;
+      RECT  1.285 0.525 3.33 0.595 ;
+      LAYER ME2 ;
+      RECT  0.295 0.525 3.205 0.575 ;
+      LAYER VI1 ;
+      RECT  0.325 0.525 0.375 0.575 ;
+      RECT  0.605 0.525 0.655 0.575 ;
+      RECT  0.885 0.525 0.935 0.575 ;
+      RECT  1.445 0.525 1.495 0.575 ;
+      RECT  1.725 0.525 1.775 0.575 ;
+      RECT  2.005 0.525 2.055 0.575 ;
+      RECT  2.285 0.525 2.335 0.575 ;
+      RECT  2.565 0.525 2.615 0.575 ;
+      RECT  2.845 0.525 2.895 0.575 ;
+      RECT  3.125 0.525 3.175 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.08 0.23 0.12 ;
+      RECT  0.47 0.08 0.51 0.12 ;
+      RECT  0.75 0.08 0.79 0.12 ;
+      RECT  1.03 0.08 1.07 0.12 ;
+      RECT  1.31 0.08 1.35 0.12 ;
+      RECT  1.59 0.08 1.63 0.12 ;
+      RECT  1.87 0.08 1.91 0.12 ;
+      RECT  2.15 0.08 2.19 0.12 ;
+      RECT  2.43 0.08 2.47 0.12 ;
+      RECT  2.71 0.08 2.75 0.12 ;
+      RECT  2.99 0.08 3.03 0.12 ;
+      RECT  3.27 0.105 3.31 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 3.44 0.05 ;
+      RECT  0.17 0.05 0.25 0.13 ;
+      RECT  0.45 0.05 0.53 0.13 ;
+      RECT  0.73 0.05 0.81 0.13 ;
+      RECT  1.01 0.05 1.09 0.13 ;
+      RECT  1.29 0.05 1.37 0.13 ;
+      RECT  1.57 0.05 1.65 0.13 ;
+      RECT  1.85 0.05 1.93 0.13 ;
+      RECT  2.13 0.05 2.21 0.13 ;
+      RECT  2.41 0.05 2.49 0.135 ;
+      RECT  2.69 0.05 2.77 0.135 ;
+      RECT  2.97 0.05 3.05 0.135 ;
+      RECT  3.25 0.05 3.33 0.145 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  1.17 0.13 1.21 0.17 ;
+      RECT  3.13 0.195 3.17 0.235 ;
+      RECT  1.45 0.2 1.49 0.24 ;
+      RECT  1.73 0.2 1.77 0.24 ;
+      RECT  2.01 0.2 2.05 0.24 ;
+      RECT  2.29 0.2 2.33 0.24 ;
+      RECT  2.57 0.2 2.61 0.24 ;
+      RECT  2.85 0.2 2.89 0.24 ;
+      RECT  1.45 0.43 1.49 0.47 ;
+      RECT  1.73 0.43 1.77 0.47 ;
+      RECT  2.01 0.43 2.05 0.47 ;
+      RECT  2.29 0.43 2.33 0.47 ;
+      RECT  2.57 0.43 2.61 0.47 ;
+      RECT  2.85 0.43 2.89 0.47 ;
+      RECT  3.13 0.435 3.17 0.475 ;
+      RECT  1.17 0.445 1.21 0.485 ;
+      LAYER ME1 ;
+      RECT  1.155 0.1 1.225 0.195 ;
+      RECT  1.155 0.195 3.335 0.245 ;
+      RECT  3.285 0.245 3.335 0.425 ;
+      RECT  1.155 0.425 3.335 0.475 ;
+      RECT  1.155 0.475 1.225 0.505 ;
+    END
+    ANTENNADIFFAREA 0.3476 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.05 0.155 0.09 0.195 ;
+      RECT  0.33 0.185 0.37 0.225 ;
+      RECT  0.61 0.185 0.65 0.225 ;
+      RECT  0.89 0.185 0.93 0.225 ;
+      RECT  1.1 0.315 1.14 0.355 ;
+      RECT  1.24 0.315 1.28 0.355 ;
+      RECT  1.38 0.315 1.42 0.355 ;
+      RECT  1.52 0.315 1.56 0.355 ;
+      RECT  1.66 0.315 1.7 0.355 ;
+      RECT  1.8 0.315 1.84 0.355 ;
+      RECT  1.94 0.315 1.98 0.355 ;
+      RECT  2.08 0.315 2.12 0.355 ;
+      RECT  2.22 0.315 2.26 0.355 ;
+      RECT  2.36 0.315 2.4 0.355 ;
+      RECT  2.5 0.315 2.54 0.355 ;
+      RECT  2.64 0.315 2.68 0.355 ;
+      RECT  2.78 0.315 2.82 0.355 ;
+      RECT  2.92 0.315 2.96 0.355 ;
+      RECT  3.06 0.315 3.1 0.355 ;
+      RECT  3.195 0.315 3.235 0.355 ;
+      RECT  0.33 0.43 0.37 0.47 ;
+      RECT  0.61 0.43 0.65 0.47 ;
+      RECT  0.89 0.435 0.93 0.475 ;
+      RECT  0.05 0.455 0.09 0.495 ;
+      LAYER ME1 ;
+      RECT  0.04 0.135 0.11 0.18 ;
+      RECT  0.04 0.18 1.095 0.23 ;
+      RECT  1.045 0.23 1.095 0.295 ;
+      RECT  1.045 0.295 3.235 0.375 ;
+      RECT  1.045 0.375 1.095 0.425 ;
+      RECT  0.04 0.425 1.095 0.475 ;
+      RECT  0.04 0.475 0.11 0.515 ;
+  END
+END PVN_BUF_PS_16
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_PS_1P5
+#      Description : "Symmetric rise/fall delay buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_PS_1P5
+  CLASS CORE ;
+  FOREIGN PVN_BUF_PS_1P5 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 0.56 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.125 0.315 0.165 0.355 ;
+      LAYER ME1 ;
+      RECT  0.125 0.29 0.18 0.41 ;
+      RECT  0.125 0.41 0.24 0.475 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0087 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 0.56 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 0.56 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 0.64 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.53 0.23 0.57 ;
+      RECT  0.47 0.53 0.51 0.57 ;
+      LAYER ME1 ;
+      RECT  0.17 0.525 0.53 0.595 ;
+      LAYER ME2 ;
+      RECT  0.235 0.525 0.515 0.575 ;
+      LAYER VI1 ;
+      RECT  0.275 0.525 0.325 0.575 ;
+      RECT  0.435 0.525 0.485 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.08 0.23 0.12 ;
+      RECT  0.47 0.105 0.51 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 0.64 0.05 ;
+      RECT  0.17 0.05 0.25 0.12 ;
+      RECT  0.45 0.05 0.53 0.145 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.135 0.37 0.175 ;
+      RECT  0.33 0.435 0.37 0.475 ;
+      LAYER ME1 ;
+      RECT  0.33 0.1 0.4 0.195 ;
+      RECT  0.33 0.195 0.535 0.245 ;
+      RECT  0.485 0.245 0.535 0.425 ;
+      RECT  0.31 0.425 0.535 0.475 ;
+    END
+    ANTENNADIFFAREA 0.0319 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.05 0.125 0.09 0.165 ;
+      RECT  0.26 0.305 0.3 0.345 ;
+      RECT  0.395 0.315 0.435 0.355 ;
+      RECT  0.05 0.53 0.09 0.57 ;
+      LAYER ME1 ;
+      RECT  0.025 0.1 0.095 0.17 ;
+      RECT  0.025 0.17 0.28 0.22 ;
+      RECT  0.23 0.22 0.28 0.295 ;
+      RECT  0.23 0.295 0.435 0.355 ;
+      RECT  0.365 0.355 0.435 0.375 ;
+      RECT  0.025 0.22 0.075 0.525 ;
+      RECT  0.025 0.525 0.11 0.595 ;
+  END
+END PVN_BUF_PS_1P5
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_PS_2
+#      Description : "Symmetric rise/fall delay buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_PS_2
+  CLASS CORE ;
+  FOREIGN PVN_BUF_PS_2 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 0.56 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.125 0.315 0.165 0.355 ;
+      LAYER ME1 ;
+      RECT  0.125 0.29 0.18 0.41 ;
+      RECT  0.125 0.41 0.24 0.475 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0123 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 0.56 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 0.56 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 0.64 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.53 0.23 0.57 ;
+      RECT  0.47 0.545 0.51 0.585 ;
+      LAYER ME1 ;
+      RECT  0.17 0.525 0.53 0.595 ;
+      LAYER ME2 ;
+      RECT  0.235 0.525 0.515 0.575 ;
+      LAYER VI1 ;
+      RECT  0.275 0.525 0.325 0.575 ;
+      RECT  0.435 0.525 0.485 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.08 0.23 0.12 ;
+      RECT  0.47 0.105 0.51 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 0.64 0.05 ;
+      RECT  0.17 0.05 0.25 0.12 ;
+      RECT  0.45 0.05 0.53 0.145 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.135 0.37 0.175 ;
+      RECT  0.33 0.435 0.37 0.475 ;
+      LAYER ME1 ;
+      RECT  0.33 0.1 0.4 0.195 ;
+      RECT  0.33 0.195 0.535 0.245 ;
+      RECT  0.485 0.245 0.535 0.425 ;
+      RECT  0.31 0.425 0.535 0.475 ;
+    END
+    ANTENNADIFFAREA 0.0451 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.05 0.175 0.09 0.215 ;
+      RECT  0.26 0.305 0.3 0.345 ;
+      RECT  0.395 0.315 0.435 0.355 ;
+      RECT  0.05 0.54 0.09 0.58 ;
+      LAYER ME1 ;
+      RECT  0.025 0.17 0.28 0.22 ;
+      RECT  0.23 0.22 0.28 0.295 ;
+      RECT  0.23 0.295 0.435 0.355 ;
+      RECT  0.365 0.355 0.435 0.375 ;
+      RECT  0.025 0.22 0.075 0.52 ;
+      RECT  0.025 0.52 0.095 0.6 ;
+  END
+END PVN_BUF_PS_2
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_PS_3
+#      Description : "Symmetric rise/fall delay buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_PS_3
+  CLASS CORE ;
+  FOREIGN PVN_BUF_PS_3 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 0.84 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.31 0.16 0.35 ;
+      RECT  0.26 0.315 0.3 0.355 ;
+      LAYER ME1 ;
+      RECT  0.04 0.195 0.11 0.295 ;
+      RECT  0.04 0.295 0.3 0.375 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0252 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 0.84 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 0.84 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 0.92 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.05 0.53 0.09 0.57 ;
+      RECT  0.33 0.53 0.37 0.57 ;
+      RECT  0.61 0.545 0.65 0.585 ;
+      LAYER ME1 ;
+      RECT  0.03 0.525 0.4 0.595 ;
+      RECT  0.58 0.525 0.785 0.595 ;
+      LAYER ME2 ;
+      RECT  0.155 0.525 0.775 0.575 ;
+      LAYER VI1 ;
+      RECT  0.185 0.525 0.235 0.575 ;
+      RECT  0.695 0.525 0.745 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.08 0.37 0.12 ;
+      RECT  0.61 0.08 0.65 0.12 ;
+      RECT  0.05 0.105 0.09 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 0.92 0.05 ;
+      RECT  0.31 0.05 0.39 0.12 ;
+      RECT  0.59 0.05 0.67 0.125 ;
+      RECT  0.03 0.05 0.11 0.145 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.47 0.135 0.51 0.175 ;
+      RECT  0.75 0.175 0.79 0.215 ;
+      RECT  0.75 0.435 0.79 0.475 ;
+      RECT  0.47 0.445 0.51 0.485 ;
+      LAYER ME1 ;
+      RECT  0.465 0.1 0.535 0.175 ;
+      RECT  0.465 0.175 0.815 0.225 ;
+      RECT  0.765 0.225 0.815 0.425 ;
+      RECT  0.465 0.425 0.815 0.475 ;
+      RECT  0.465 0.475 0.53 0.505 ;
+    END
+    ANTENNADIFFAREA 0.0798 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.19 0.165 0.23 0.205 ;
+      RECT  0.4 0.315 0.44 0.355 ;
+      RECT  0.54 0.315 0.58 0.355 ;
+      RECT  0.675 0.315 0.715 0.355 ;
+      RECT  0.19 0.43 0.23 0.47 ;
+      LAYER ME1 ;
+      RECT  0.175 0.145 0.245 0.175 ;
+      RECT  0.175 0.175 0.415 0.225 ;
+      RECT  0.365 0.225 0.415 0.295 ;
+      RECT  0.365 0.295 0.715 0.375 ;
+      RECT  0.365 0.375 0.415 0.425 ;
+      RECT  0.17 0.425 0.415 0.475 ;
+  END
+END PVN_BUF_PS_3
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_PS_4
+#      Description : "Symmetric rise/fall delay buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_PS_4
+  CLASS CORE ;
+  FOREIGN PVN_BUF_PS_4 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 0.98 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.31 0.16 0.35 ;
+      RECT  0.26 0.315 0.3 0.355 ;
+      LAYER ME1 ;
+      RECT  0.04 0.195 0.11 0.295 ;
+      RECT  0.04 0.295 0.3 0.375 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0237 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 0.98 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 0.98 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 1.06 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.05 0.53 0.09 0.57 ;
+      RECT  0.33 0.53 0.37 0.57 ;
+      RECT  0.61 0.54 0.65 0.58 ;
+      RECT  0.89 0.545 0.93 0.585 ;
+      LAYER ME1 ;
+      RECT  0.03 0.525 0.4 0.595 ;
+      RECT  0.58 0.525 0.95 0.595 ;
+      LAYER ME2 ;
+      RECT  0.155 0.525 0.925 0.575 ;
+      LAYER VI1 ;
+      RECT  0.185 0.525 0.235 0.575 ;
+      RECT  0.61 0.525 0.66 0.575 ;
+      RECT  0.845 0.525 0.895 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.08 0.37 0.12 ;
+      RECT  0.61 0.08 0.65 0.12 ;
+      RECT  0.05 0.105 0.09 0.145 ;
+      RECT  0.89 0.105 0.93 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 1.06 0.05 ;
+      RECT  0.31 0.05 0.39 0.125 ;
+      RECT  0.59 0.05 0.67 0.13 ;
+      RECT  0.03 0.05 0.11 0.145 ;
+      RECT  0.87 0.05 0.95 0.145 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.47 0.15 0.51 0.19 ;
+      RECT  0.75 0.195 0.79 0.235 ;
+      RECT  0.75 0.435 0.79 0.475 ;
+      RECT  0.47 0.445 0.51 0.485 ;
+      LAYER ME1 ;
+      RECT  0.465 0.1 0.535 0.19 ;
+      RECT  0.465 0.19 0.815 0.195 ;
+      RECT  0.465 0.195 0.955 0.24 ;
+      RECT  0.75 0.24 0.955 0.245 ;
+      RECT  0.905 0.245 0.955 0.425 ;
+      RECT  0.465 0.425 0.955 0.475 ;
+      RECT  0.465 0.475 0.525 0.505 ;
+    END
+    ANTENNADIFFAREA 0.0869 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.19 0.165 0.23 0.205 ;
+      RECT  0.4 0.315 0.44 0.355 ;
+      RECT  0.54 0.315 0.58 0.355 ;
+      RECT  0.68 0.315 0.72 0.355 ;
+      RECT  0.815 0.315 0.855 0.355 ;
+      RECT  0.19 0.43 0.23 0.47 ;
+      LAYER ME1 ;
+      RECT  0.175 0.145 0.245 0.175 ;
+      RECT  0.175 0.175 0.415 0.225 ;
+      RECT  0.365 0.225 0.415 0.295 ;
+      RECT  0.365 0.295 0.855 0.375 ;
+      RECT  0.365 0.375 0.415 0.425 ;
+      RECT  0.17 0.425 0.415 0.475 ;
+  END
+END PVN_BUF_PS_4
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_PS_5
+#      Description : "Symmetric rise/fall delay buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_PS_5
+  CLASS CORE ;
+  FOREIGN PVN_BUF_PS_5 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 1.12 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.31 0.16 0.35 ;
+      RECT  0.26 0.315 0.3 0.355 ;
+      LAYER ME1 ;
+      RECT  0.035 0.2 0.115 0.295 ;
+      RECT  0.035 0.295 0.3 0.375 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0252 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 1.12 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 1.12 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 1.2 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.05 0.53 0.09 0.57 ;
+      RECT  0.33 0.53 0.37 0.57 ;
+      RECT  0.61 0.54 0.65 0.58 ;
+      RECT  0.89 0.545 0.93 0.585 ;
+      LAYER ME1 ;
+      RECT  0.03 0.525 0.4 0.595 ;
+      RECT  0.58 0.525 0.97 0.595 ;
+      LAYER ME2 ;
+      RECT  0.155 0.525 0.965 0.575 ;
+      LAYER VI1 ;
+      RECT  0.185 0.525 0.235 0.575 ;
+      RECT  0.61 0.525 0.66 0.575 ;
+      RECT  0.885 0.525 0.935 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.08 0.37 0.12 ;
+      RECT  0.61 0.08 0.65 0.12 ;
+      RECT  0.89 0.08 0.93 0.12 ;
+      RECT  0.05 0.105 0.09 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 1.2 0.05 ;
+      RECT  0.31 0.05 0.39 0.125 ;
+      RECT  0.59 0.05 0.67 0.13 ;
+      RECT  0.87 0.05 0.95 0.13 ;
+      RECT  0.03 0.05 0.11 0.15 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.47 0.16 0.51 0.2 ;
+      RECT  0.75 0.195 0.79 0.235 ;
+      RECT  1.03 0.195 1.07 0.235 ;
+      RECT  0.75 0.43 0.79 0.47 ;
+      RECT  1.03 0.435 1.07 0.475 ;
+      RECT  0.47 0.445 0.51 0.485 ;
+      LAYER ME1 ;
+      RECT  0.465 0.1 0.535 0.19 ;
+      RECT  0.465 0.19 1.095 0.24 ;
+      RECT  1.045 0.24 1.095 0.425 ;
+      RECT  0.465 0.425 1.095 0.475 ;
+      RECT  0.465 0.475 0.525 0.505 ;
+    END
+    ANTENNADIFFAREA 0.126 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.19 0.165 0.23 0.205 ;
+      RECT  0.4 0.315 0.44 0.355 ;
+      RECT  0.54 0.315 0.58 0.355 ;
+      RECT  0.68 0.315 0.72 0.355 ;
+      RECT  0.82 0.315 0.86 0.355 ;
+      RECT  0.955 0.315 0.995 0.355 ;
+      RECT  0.19 0.43 0.23 0.47 ;
+      LAYER ME1 ;
+      RECT  0.175 0.145 0.245 0.175 ;
+      RECT  0.175 0.175 0.415 0.225 ;
+      RECT  0.365 0.225 0.415 0.295 ;
+      RECT  0.365 0.295 0.995 0.375 ;
+      RECT  0.365 0.375 0.415 0.425 ;
+      RECT  0.17 0.425 0.415 0.475 ;
+  END
+END PVN_BUF_PS_5
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_PS_6
+#      Description : "Symmetric rise/fall delay buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_PS_6
+  CLASS CORE ;
+  FOREIGN PVN_BUF_PS_6 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 1.4 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.31 0.16 0.35 ;
+      RECT  0.26 0.31 0.3 0.35 ;
+      RECT  0.4 0.315 0.44 0.355 ;
+      LAYER ME1 ;
+      RECT  0.1 0.295 0.44 0.375 ;
+      LAYER ME2 ;
+      RECT  0.155 0.325 0.435 0.375 ;
+      LAYER VI1 ;
+      RECT  0.185 0.325 0.235 0.375 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0369 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 1.4 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 1.4 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 1.48 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.53 0.23 0.57 ;
+      RECT  0.47 0.53 0.51 0.57 ;
+      RECT  0.75 0.54 0.79 0.58 ;
+      RECT  1.03 0.54 1.07 0.58 ;
+      RECT  1.31 0.545 1.35 0.585 ;
+      LAYER ME1 ;
+      RECT  0.155 0.525 0.545 0.595 ;
+      RECT  0.72 0.525 1.37 0.595 ;
+      LAYER ME2 ;
+      RECT  0.155 0.525 1.245 0.575 ;
+      LAYER VI1 ;
+      RECT  0.185 0.525 0.235 0.575 ;
+      RECT  0.465 0.525 0.515 0.575 ;
+      RECT  0.885 0.525 0.935 0.575 ;
+      RECT  1.165 0.525 1.215 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.08 0.23 0.12 ;
+      RECT  0.47 0.08 0.51 0.12 ;
+      RECT  0.75 0.09 0.79 0.13 ;
+      RECT  1.03 0.09 1.07 0.13 ;
+      RECT  1.31 0.105 1.35 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 1.48 0.05 ;
+      RECT  0.17 0.05 0.25 0.125 ;
+      RECT  0.45 0.05 0.53 0.125 ;
+      RECT  0.73 0.05 0.81 0.145 ;
+      RECT  1.01 0.05 1.09 0.145 ;
+      RECT  1.29 0.05 1.37 0.145 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.61 0.16 0.65 0.2 ;
+      RECT  1.17 0.195 1.21 0.235 ;
+      RECT  0.89 0.2 0.93 0.24 ;
+      RECT  0.89 0.43 0.93 0.47 ;
+      RECT  1.17 0.435 1.21 0.475 ;
+      RECT  0.61 0.445 0.65 0.485 ;
+      LAYER ME1 ;
+      RECT  0.605 0.1 0.675 0.195 ;
+      RECT  0.605 0.195 1.375 0.245 ;
+      RECT  1.325 0.245 1.375 0.425 ;
+      RECT  0.605 0.425 1.375 0.475 ;
+      RECT  0.605 0.475 0.655 0.515 ;
+    END
+    ANTENNADIFFAREA 0.1353 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.05 0.155 0.09 0.195 ;
+      RECT  0.33 0.18 0.37 0.22 ;
+      RECT  0.54 0.315 0.58 0.355 ;
+      RECT  0.68 0.315 0.72 0.355 ;
+      RECT  0.82 0.315 0.86 0.355 ;
+      RECT  0.96 0.315 1.0 0.355 ;
+      RECT  1.1 0.315 1.14 0.355 ;
+      RECT  1.235 0.315 1.275 0.355 ;
+      RECT  0.33 0.43 0.37 0.47 ;
+      RECT  0.05 0.44 0.09 0.48 ;
+      LAYER ME1 ;
+      RECT  0.045 0.125 0.095 0.175 ;
+      RECT  0.045 0.175 0.555 0.225 ;
+      RECT  0.505 0.225 0.555 0.295 ;
+      RECT  0.505 0.295 1.275 0.375 ;
+      RECT  0.505 0.375 0.555 0.425 ;
+      RECT  0.03 0.425 0.555 0.475 ;
+      RECT  0.03 0.475 0.11 0.495 ;
+  END
+END PVN_BUF_PS_6
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_BUF_PS_8
+#      Description : "Symmetric rise/fall delay buffer, Always On"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_BUF_PS_8
+  CLASS CORE ;
+  FOREIGN PVN_BUF_PS_8 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 1.82 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.31 0.16 0.35 ;
+      RECT  0.26 0.31 0.3 0.35 ;
+      RECT  0.4 0.31 0.44 0.35 ;
+      RECT  0.54 0.315 0.58 0.355 ;
+      LAYER ME1 ;
+      RECT  0.03 0.2 0.11 0.295 ;
+      RECT  0.03 0.295 0.58 0.375 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0432 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 1.82 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 1.82 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 1.9 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.05 0.525 0.09 0.565 ;
+      RECT  0.33 0.53 0.37 0.57 ;
+      RECT  0.61 0.53 0.65 0.57 ;
+      RECT  1.73 0.525 1.77 0.565 ;
+      RECT  0.89 0.53 0.93 0.57 ;
+      RECT  1.17 0.53 1.21 0.57 ;
+      RECT  1.45 0.53 1.49 0.57 ;
+      LAYER ME1 ;
+      RECT  0.03 0.525 0.68 0.595 ;
+      RECT  0.87 0.525 1.79 0.595 ;
+      LAYER ME2 ;
+      RECT  0.155 0.525 1.665 0.575 ;
+      LAYER VI1 ;
+      RECT  0.185 0.525 0.235 0.575 ;
+      RECT  0.465 0.525 0.515 0.575 ;
+      RECT  1.025 0.525 1.075 0.575 ;
+      RECT  1.585 0.525 1.635 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.08 0.37 0.12 ;
+      RECT  0.61 0.08 0.65 0.12 ;
+      RECT  0.89 0.09 0.93 0.13 ;
+      RECT  1.17 0.09 1.21 0.13 ;
+      RECT  1.45 0.09 1.49 0.13 ;
+      RECT  0.05 0.105 0.09 0.145 ;
+      RECT  1.73 0.105 1.77 0.145 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 1.9 0.05 ;
+      RECT  0.31 0.05 0.39 0.125 ;
+      RECT  0.59 0.05 0.67 0.125 ;
+      RECT  0.87 0.05 0.95 0.145 ;
+      RECT  1.15 0.05 1.23 0.145 ;
+      RECT  1.43 0.05 1.51 0.145 ;
+      RECT  1.71 0.05 1.79 0.145 ;
+      RECT  0.03 0.05 0.11 0.15 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.75 0.16 0.79 0.2 ;
+      RECT  1.59 0.195 1.63 0.235 ;
+      RECT  1.03 0.2 1.07 0.24 ;
+      RECT  1.31 0.2 1.35 0.24 ;
+      RECT  1.03 0.435 1.07 0.475 ;
+      RECT  1.31 0.435 1.35 0.475 ;
+      RECT  1.59 0.435 1.63 0.475 ;
+      RECT  0.75 0.455 0.79 0.495 ;
+      LAYER ME1 ;
+      RECT  0.745 0.1 0.815 0.195 ;
+      RECT  0.745 0.195 1.795 0.245 ;
+      RECT  1.745 0.245 1.795 0.425 ;
+      RECT  0.745 0.425 1.795 0.475 ;
+      RECT  0.745 0.475 0.795 0.525 ;
+    END
+    ANTENNADIFFAREA 0.1584 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.19 0.155 0.23 0.195 ;
+      RECT  0.47 0.18 0.51 0.22 ;
+      RECT  0.68 0.315 0.72 0.355 ;
+      RECT  0.82 0.315 0.86 0.355 ;
+      RECT  0.96 0.315 1.0 0.355 ;
+      RECT  1.1 0.315 1.14 0.355 ;
+      RECT  1.24 0.315 1.28 0.355 ;
+      RECT  1.38 0.315 1.42 0.355 ;
+      RECT  1.52 0.315 1.56 0.355 ;
+      RECT  1.655 0.315 1.695 0.355 ;
+      RECT  0.19 0.435 0.23 0.475 ;
+      RECT  0.47 0.435 0.51 0.475 ;
+      LAYER ME1 ;
+      RECT  0.185 0.125 0.235 0.175 ;
+      RECT  0.185 0.175 0.695 0.225 ;
+      RECT  0.645 0.225 0.695 0.295 ;
+      RECT  0.645 0.295 1.695 0.375 ;
+      RECT  0.645 0.375 0.695 0.425 ;
+      RECT  0.16 0.425 0.695 0.475 ;
+  END
+END PVN_BUF_PS_8
+#----------------------------------------------------------     -------------
+#      Cell        : PVN_LVLDBUF_DP_1
+#      Description : "VDD Down-Level Translator - Buffer, State Retention"
+#      Equation    : X=A
+#      Version     : $                     Revision: 5.13 $
+#      Created     : $                     Date: 2011/08/18 09:33:56 $
+#
+
+MACRO PVN_LVLDBUF_DP_1
+  CLASS CORE ;
+  FOREIGN PVN_LVLDBUF_DP_1 0 0 ;
+  ORIGIN 0 0 ;
+  SIZE 0.42 BY 0.7 ;
+  SYMMETRY X Y ;
+  SITE UM28_DUT ;
+  PIN A
+    DIRECTION INPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.12 0.305 0.16 0.345 ;
+      LAYER ME1 ;
+      RECT  0.025 0.275 0.165 0.375 ;
+      LAYER ME2 ;
+      RECT  0.055 0.325 0.335 0.375 ;
+      LAYER VI1 ;
+      RECT  0.085 0.325 0.135 0.375 ;
+    END
+    ANTENNAMODEL OXIDE1 ;
+    ANTENNAGATEAREA 0.0072 ;
+  END A
+  PIN VBN
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER PWEL ;
+      RECT  0.0 0.0 0.42 0.335 ;
+    END
+  END VBN
+  PIN VBP
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE FEEDTHRU ;
+    PORT
+      LAYER NWEL ;
+      RECT  0.0 0.335 0.42 0.7 ;
+    END
+  END VBP
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER ME1 ;
+      RECT  -0.08 0.65 0.5 0.75 ;
+    END
+  END VDD
+  PIN VDDR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.53 0.23 0.57 ;
+      LAYER ME1 ;
+      RECT  0.155 0.525 0.265 0.545 ;
+      RECT  0.065 0.545 0.265 0.595 ;
+      LAYER ME2 ;
+      RECT  0.065 0.525 0.345 0.575 ;
+      LAYER VI1 ;
+      RECT  0.185 0.525 0.235 0.575 ;
+    END
+  END VDDR
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.19 0.08 0.23 0.12 ;
+      LAYER ME1 ;
+      RECT  -0.08 -0.05 0.5 0.05 ;
+      RECT  0.17 0.05 0.25 0.125 ;
+    END
+  END VSS
+  PIN X
+    DIRECTION OUTPUT ;
+    PORT
+      LAYER CONT ;
+      RECT  0.33 0.13 0.37 0.17 ;
+      RECT  0.33 0.445 0.37 0.485 ;
+      LAYER ME1 ;
+      RECT  0.315 0.1 0.395 0.2 ;
+      RECT  0.345 0.2 0.395 0.415 ;
+      RECT  0.325 0.415 0.395 0.515 ;
+    END
+    ANTENNADIFFAREA 0.0336 ;
+  END X
+  OBS
+      LAYER CONT ;
+      RECT  0.05 0.125 0.09 0.165 ;
+      RECT  0.255 0.305 0.295 0.345 ;
+      RECT  0.05 0.44 0.09 0.48 ;
+      LAYER ME1 ;
+      RECT  0.035 0.1 0.105 0.175 ;
+      RECT  0.035 0.175 0.265 0.225 ;
+      RECT  0.215 0.225 0.265 0.275 ;
+      RECT  0.215 0.275 0.295 0.375 ;
+      RECT  0.215 0.375 0.265 0.425 ;
+      RECT  0.025 0.425 0.265 0.475 ;
+      RECT  0.025 0.475 0.115 0.495 ;
+  END
+END PVN_LVLDBUF_DP_1
+
+END LIBRARY
