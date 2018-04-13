@@ -4,12 +4,14 @@
 
 int main()
 {
+	// lef_example.lef
+	CLefParser parser("raz.txt");
+	std::vector<CCell> res = parser.retrieveCells();
+	std::cout << "cell count = " << parser.parsedCellCount() << std::endl;
+	
+	for (int i = 0; i < res.size(); ++i) 
+		std::cout << "Area = " << res[i].area() << std::endl;
 
-	CLefParser parser("aaa");
-	//std::vector<CCell> res = 
-	parser.retrieveCells();
-
-	std::cout << "cell count = " << parser.cells.size() << std::endl;
 	system("pause");
 	return 0;
 }

@@ -10,6 +10,7 @@ class CLayer
 public:
 	CLayer(std::vector<CRectangle>, std::string);
 	~CLayer();
+	double area() const;
 private:
 	std::string m_type;
 	std::vector<CRectangle> m_rectangles;

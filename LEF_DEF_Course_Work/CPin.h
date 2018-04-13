@@ -8,7 +8,7 @@ class CPin
 public:
 	CPin(std::vector<CLayer>, std::string);
 	~CPin();
-	CPin() {};
+	double area() const;
 private:
 	std::vector<CLayer> m_layers;
 	std::string m_type;

@@ -17,31 +17,12 @@ std::vector<CCell> CLefParser::retrieveCells()
 {
 	parse();
 
-	return std::vector<CCell>();
+	return this->cells;
 }
 
 void CLefParser::parse()
 {	
-	// lef_example.lef
-	std::ifstream file("lef_example.lef");
-	/*std::string line;
-	std::string cellName;
-
-	while (std::getline(file, line))
-	{
-		std::istringstream ss(line);
-		std::vector<std::string> words;
-		std::string word;
-
-		while (ss >> word)
-			words.push_back(word);
-		 
-		if (words.size() && words[0] == MACRO)
-		{
-			cellName = words[1];
-			std::cout << "cellName = " << cellName << std::endl;
-		} 
-	}*/
+	std::ifstream file(file_name);
 
 	std::vector<std::string> words;
 	std::copy(std::istream_iterator<std::string>(file),
@@ -155,4 +136,9 @@ CPin CLefParser::retrieveOnePin(const std::vector<std::string> words, int start,
 	}
 
 	return CPin(layers, name);
+}
+
+int CLefParser::parsedCellCount() const
+{
+	return cells.size();
 }
